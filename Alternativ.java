@@ -9,10 +9,11 @@ public class Alternativ {
             String[] data = st1.split(" ");
             int maxStringLength = 10;
 //исключение, количество символов в строке не более 10
-            for (int i = 0; i < data.length ;i++ )
-                if (data.length > maxStringLength){
+            for (int i = 0; i < data.length ;i++ ){
+                if (data[i].length() > maxStringLength){
                     throw new Exception("В строке не должно быть более 10 символов");
                 }
+            }
 //исключение, что первый аргумент - строка
             if (!(st.charAt(0) == '\"')) {
                 throw new Exception("Первым аргументом должна быть строка в двойных кавычках");
